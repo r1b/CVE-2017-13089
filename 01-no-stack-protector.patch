@@ -1,0 +1,14 @@
+diff --git a/configure.ac b/configure.ac
+index 686f0404..338be0ec 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -783,6 +783,9 @@ AM_CONDITIONAL([WITH_SSL], [test "X$with_ssl" != "Xno"])
+ AM_CONDITIONAL([METALINK_IS_ENABLED], [test "X$with_metalink" != "Xno"])
+ AM_CONDITIONAL([WITH_XATTR], [test "X$ENABLE_XATTR" != "Xno"])
+ 
++dnl Disable stack canaries
++CFLAGS="-fno-stack-protector $CFLAGS"
++
+ dnl
+ dnl Create output
+ dnl
