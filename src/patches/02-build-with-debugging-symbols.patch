@@ -1,0 +1,14 @@
+diff --git a/configure.ac b/configure.ac
+index 338be0ec..db56c6c0 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -786,6 +786,9 @@ AM_CONDITIONAL([WITH_XATTR], [test "X$ENABLE_XATTR" != "Xno"])
+ dnl Disable stack canaries
+ CFLAGS="-fno-stack-protector $CFLAGS"
+ 
++dnl Build with debugging symbols
++CFLAGS="-g $CFLAGS"
++
+ dnl
+ dnl Create output
+ dnl
